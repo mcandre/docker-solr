@@ -31,7 +31,6 @@ curl -s "http://$(docker-machine ip default):8983/solr/books/update/?commit=true
 curl "http://$(docker-machine ip default):8983/solr/books/select?q=name:*Lucene*&wt=json"
 
 {"responseHeader":{"status":0,"QTime":97,"params":{"q":"name:*Lucene*","wt":"json"}},"response":{"numFound":1,"start":0,"docs":[{"id":"978-1933988177","cat":["book","paperback"],"name":["Lucene in Action, Second Edition"],"author":["Michael McCandless"],"sequence_i":1,"genre_s":"IT","inStock":[true],"price":[30.5],"pages_i":475,"_version_":1520662500687740928}]}}
-...
 ```
 
 # REQUIREMENTS
