@@ -8,12 +8,12 @@ https://registry.hub.docker.com/u/mcandre/docker-solr/
 
 ```
 $ make
-docker run -d -p 8983:8983 mcandre/docker-solr:5.3.0
+docker run -d -p 8983:8983 mcandre/docker-solr:5.2.0
 058cb43bdee80ce214427920104052c4aa90c484cea00ae09d41b2a2f3dd58fb
 docker exec 058cb43bdee80ce214427920104052c4aa90c484cea00ae09d41b2a2f3dd58fb solr create -c books
 
 Copying configuration to new core instance directory:
-/solr-5.3.0/example/exampledocs/books
+/solr-5.2.0/example/exampledocs/books
 
 Creating new core 'books' using command:
 http://localhost:8983/solr/admin/cores?action=CREATE&name=books&instanceDir=books
