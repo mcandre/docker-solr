@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
 ENV SOLR_HOME /solr-5.4.0/example/exampledocs
 ENV PATH $PATH:/solr-5.4.0/bin
