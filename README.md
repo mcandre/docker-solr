@@ -8,11 +8,11 @@ https://registry.hub.docker.com/u/mcandre/docker-solr/
 
 ```
 $ make
-docker run -d -p 8983:8983 mcandre/docker-solr:4.3.1
+docker run -d -p 8983:8983 mcandre/docker-solr:4.3.0
 058cb43bdee80ce214427920104052c4aa90c484cea00ae09d41b2a2f3dd58fb
 
 curl "http://$(docker-machine ip default):8983/solr/admin/cores?action=STATUS&wt=json"
-{"responseHeader":{"status":0,"QTime":2},"defaultCoreName":"collection1","initFailures":{},"status":{"collection1":{"name":"collection1","isDefaultCore":true,"instanceDir":"/solr-4.3.1/example/solr/collection1/","dataDir":"/solr-4.3.1/example/solr/collection1/data/","config":"solrconfig.xml","schema":"schema.xml","startTime":"2015-12-17T20:32:49.525Z","uptime":2846,"index":{"numDocs":0,"maxDoc":0,"deletedDocs":0,"indexHeapUsageBytes":0,"version":1,"segmentCount":0,"current":true,"hasDeletions":false,"directory":"org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(MMapDirectory@/solr-4.3.1/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/solr-4.3.1/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0)","userData":{},"sizeInBytes":89,"size":"89 bytes"}}}}
+{"responseHeader":{"status":0,"QTime":2},"defaultCoreName":"collection1","initFailures":{},"status":{"collection1":{"name":"collection1","isDefaultCore":true,"instanceDir":"/solr-4.3.0/example/solr/collection1/","dataDir":"/solr-4.3.0/example/solr/collection1/data/","config":"solrconfig.xml","schema":"schema.xml","startTime":"2015-12-17T20:32:49.525Z","uptime":2846,"index":{"numDocs":0,"maxDoc":0,"deletedDocs":0,"indexHeapUsageBytes":0,"version":1,"segmentCount":0,"current":true,"hasDeletions":false,"directory":"org.apache.lucene.store.NRTCachingDirectory:NRTCachingDirectory(MMapDirectory@/solr-4.3.0/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/solr-4.3.0/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0)","userData":{},"sizeInBytes":89,"size":"89 bytes"}}}}
 ```
 
 # REQUIREMENTS
