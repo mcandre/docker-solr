@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-solr:4.4.0
+IMAGE=mcandre/docker-solr:4.3.1
 
 export LOCALHOST=$$(docker-machine ip default)
 
