@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-solr:5.0.0
+IMAGE=mcandre/docker-solr:4.10.4
 
 export LOCALHOST=$$(docker-machine ip default)
 
@@ -17,10 +17,8 @@ build: Dockerfile
 
 run: clean-containers build
 	$(eval CONTAINER=$(shell docker run -d -p 8983:8983 $(IMAGE)))
-	sleep 2
-	docker exec $(CONTAINER) solr create -c books
-	curl -s "http://$(LOCALHOST):8983/solr/books/update/?commit=true" -d @books.json -H 'Content-Type:application/json'
-	curl "http://$(LOCALHOST):8983/solr/books/select?q=name:*Lucene*&wt=json"
+	sleep 4
+	curl -s "http://$(LOCALHOST):8983/solr/admin/cores?action=STATUS&wt=json"
 
 clean-containers:
 	-docker ps -a | grep -v IMAGE | awk '{ print $$1 }' | xargs docker rm -f
