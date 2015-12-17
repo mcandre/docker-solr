@@ -1,11 +1,12 @@
 FROM java:8
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
-ENV SOLR_HOME /solr-4.10.0/example/exampledocs
-ENV PATH $PATH:/solr-4.10.0/bin
-ADD http://archive.apache.org/dist/lucene/solr/4.10.0/solr-4.10.0.tgz /solr-4.10.0.tgz
+ENV SOLR_HOME /solr-4.9.1/example/exampledocs
+ENV PATH $PATH:/solr-4.9.1/bin
+ADD start-solr.sh /start-solr.sh
+ADD http://archive.apache.org/dist/lucene/solr/4.9.1/solr-4.9.1.tgz /solr-4.9.1.tgz
 RUN apt-get update && \
     apt-get install -y lsof && \
-    tar xzvf /solr-4.10.0.tgz && \
-    rm /solr-4.10.0.tgz
+    tar xzvf /solr-4.9.1.tgz && \
+    rm /solr-4.9.1.tgz
 EXPOSE 8983
-ENTRYPOINT /solr-4.10.0/bin/solr start -f
+ENTRYPOINT /start-solr.sh

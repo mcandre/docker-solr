@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-solr:4.10.0
+IMAGE=mcandre/docker-solr:4.9.1
 
 export LOCALHOST=$$(docker-machine ip default)
 
@@ -17,7 +17,7 @@ build: Dockerfile
 
 run: clean-containers build
 	$(eval CONTAINER=$(shell docker run -d -p 8983:8983 $(IMAGE)))
-	sleep 4
+	sleep 8
 	curl -s "http://$(LOCALHOST):8983/solr/admin/cores?action=STATUS&wt=json"
 
 clean-containers:
