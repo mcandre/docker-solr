@@ -8,7 +8,7 @@ https://registry.hub.docker.com/u/mcandre/docker-solr/
 
 ```
 $ make
-docker run -d -p 8983:8983 mcandre/docker-solr:4.10.4
+docker run -d -p 8983:8983 mcandre/docker-solr:4.10.3
 058cb43bdee80ce214427920104052c4aa90c484cea00ae09d41b2a2f3dd58fb
 
 curl "http://$(docker-machine ip default):8983/solr/admin/cores?action=STATUS&wt=json"
