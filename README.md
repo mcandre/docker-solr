@@ -8,30 +8,16 @@ https://registry.hub.docker.com/u/mcandre/docker-solr/
 
 ```
 $ make
-docker run -d -p 8983:8983 mcandre/docker-solr:1.2.0
+docker run -d -p 8983:8983 mcandre/docker-solr:1.1.0-incubating
 058cb43bdee80ce214427920104052c4aa90c484cea00ae09d41b2a2f3dd58fb
 
 curl "http://$(docker-machine ip default):8983/solr/"
-
-
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="solr-admin.css">
-<link rel="icon" href="favicon.ico" type="image/ico"></link>
-<link rel="shortcut icon" href="favicon.ico" type="image/ico"></link>
-<title>Welcome to Solr</title>
-</head>
-
-<body>
-<h1>Welcome to Solr!</h1>
-<a href="."><img border="0" align="right" height="78" width="142" src="admin/solr_small.png" alt="Solr"/></a>
-
-
-<a href="admin/">Solr Admin</a>
-
-
-</body>
-</html>
+<HTML><HEAD><TITLE>Directory: /solr/</TITLE></HEAD><BODY>
+<H1>Directory: /solr/</H1><TABLE BORDER=0><TR><TD><A HREF="/solr/META-INF/">META-INF/&nbsp;</TD><TD ALIGN=right>4096 bytes&nbsp;</TD><TD>Dec 18, 2015 4:47:09 PM</TD></TR>
+<TR><TD><A HREF="/solr/WEB-INF/">WEB-INF/&nbsp;</TD><TD ALIGN=right>4096 bytes&nbsp;</TD><TD>Dec 18, 2015 4:47:09 PM</TD></TR>
+<TR><TD><A HREF="/solr/admin/">admin/&nbsp;</TD><TD ALIGN=right>4096 bytes&nbsp;</TD><TD>Dec 18, 2015 4:47:09 PM</TD></TR>
+</TABLE>
+</BODY></HTML>
 ```
 
 # REQUIREMENTS
