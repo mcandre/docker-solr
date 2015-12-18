@@ -8,11 +8,30 @@ https://registry.hub.docker.com/u/mcandre/docker-solr/
 
 ```
 $ make
-docker run -d -p 8983:8983 mcandre/docker-solr:3.1.0
+docker run -d -p 8983:8983 mcandre/docker-solr:1.4.1
 058cb43bdee80ce214427920104052c4aa90c484cea00ae09d41b2a2f3dd58fb
 
-curl "http://$(docker-machine ip default):8983/solr/admin/cores?action=STATUS&wt=json"
-{"responseHeader":{"status":0,"QTime":13},"status":{"":{"name":"","instanceDir":"solr/./","dataDir":"solr/./data/","startTime":"2015-12-18T15:52:11.337Z","uptime":5160,"index":{"numDocs":0,"maxDoc":0,"version":1450453931388,"segmentCount":0,"current":true,"hasDeletions":false,"directory":"org.apache.lucene.store.MMapDirectory:org.apache.lucene.store.MMapDirectory@/apache-solr-3.1.0/example/solr/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@2426791a","lastModified":"2015-12-18T15:52:11Z"}}}}docker-solr (3.1.0)
+curl "http://$(docker-machine ip default):8983/solr/"
+
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="solr-admin.css">
+<link rel="icon" href="favicon.ico" type="image/ico"></link>
+<link rel="shortcut icon" href="favicon.ico" type="image/ico"></link>
+<title>Welcome to Solr</title>
+</head>
+
+<body>
+<h1>Welcome to Solr!</h1>
+<a href="."><img border="0" align="right" height="78" width="142" src="admin/solr_small.png" alt="Solr"/></a>
+
+
+<a href="admin/">Solr Admin</a>
+
+
+</body>
+</html>
 ```
 
 # REQUIREMENTS
