@@ -1,12 +1,12 @@
 FROM java:8
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
-ENV SOLR_HOME /apache-solr-4.0.0-BETA/example/exampledocs
-ENV PATH $PATH:/apache-solr-4.0.0-BETA/bin
+ENV SOLR_HOME /apache-solr-4.0.0-ALPHA/example/exampledocs
+ENV PATH $PATH:/apache-solr-4.0.0-ALPHA/bin
 ADD start-solr.sh /start-solr.sh
-ADD http://archive.apache.org/dist/lucene/solr/4.0.0-BETA/apache-solr-4.0.0-BETA.tgz /apache-solr-4.0.0-BETA.tgz
+ADD http://archive.apache.org/dist/lucene/solr/4.0.0-ALPHA/apache-solr-4.0.0-ALPHA.tgz /apache-solr-4.0.0-ALPHA.tgz
 RUN apt-get update && \
     apt-get install -y lsof && \
-    tar xzvf /apache-solr-4.0.0-BETA.tgz && \
-    rm /apache-solr-4.0.0-BETA.tgz
+    tar xzvf /apache-solr-4.0.0-ALPHA.tgz && \
+    rm /apache-solr-4.0.0-ALPHA.tgz
 EXPOSE 8983
 ENTRYPOINT /start-solr.sh
