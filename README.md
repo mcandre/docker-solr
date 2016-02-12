@@ -40,6 +40,7 @@ curl "http://$(docker-machine ip default):8983/solr/books/select?q=name:*Lucene*
 ## Optional
 
 * [make](http://www.gnu.org/software/make/)
+* [Node.js](https://nodejs.org/en/) (for dockerlint)
 
 ## Debian/Ubuntu
 
